@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Women | ShoeHub</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+
+    <!-- Women CSS -->
+    <link rel="stylesheet" href="women.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+    <nav class="main-navbar">
+    <div class="nav-container">
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            👟 Shoe<span>Hub</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Navigation -->
+        <div class="nav-menu" id="navMenu">
+
+            <a href="index.html" class="nav-link">
+                Home
+            </a>
+
+            <a href="shop.html" class="nav-link">
+                Shop
+            </a>
+
+            <a href="men.html" class="nav-link">
+                Men
+            </a>
+
+            <a href="women.html" class="nav-link">
+                Women
+            </a>
+
+            <a href="Contact.html" class="nav-link">
+                Contact
+            </a>
+
+        </div>
+
+        <!-- Search -->
+        <form class="nav-search" id="searchForm">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search shoes..."
+                autocomplete="off"
+            >
+            <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <!-- Cart -->
+        <button class="cart-btn" id="cartBtn" type="button">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+    </div>
+</nav>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+<!-- ================= BANNER ================= -->
+
+<section class="shop-banner">
+
+    <img
+        src="womenbanner.avif"
+        alt="Women's Shoes">
+
+    <div class="banner-overlay"></div>
+
+    <div class="shop-banner-content">
+
+        <p class="banner-small">
+            WOMEN'S COLLECTION
+        </p>
+
+        <h1>
+            STEP INTO
+            <br>
+            <span>STYLE</span>
+        </h1>
+
+        <p class="banner-description">
+            Discover our premium women's shoe collection
+            designed for comfort, elegance and everyday style.
+        </p>
+
+        <div class="banner-buttons">
+
+            <button
+                class="shop-btn"
+                onclick="scrollToCollection()">
+
+                Shop Collection
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+            <button
+                class="new-btn"
+                onclick="showNewArrivals()">
+
+                New Arrivals
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORY ================= -->
+
+<section class="category-section">
+
+    <div class="category-heading">
+
+        <p class="section-label">
+            SHOP BY CATEGORY
+        </p>
+
+        <h2>
+            Find Your Perfect Pair
+        </h2>
+
+        <p>
+            Explore stylish shoes for every occasion.
+        </p>
+
+    </div>
+
+
+    <div class="category-buttons">
+
+        <button
+            class="category-btn active"
+            data-category="all">
+
+            ALL SHOES
+
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="heels">
+
+            HEELS
+
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="sneakers">
+
+            SNEAKERS
+
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="casual">
+
+            CASUAL
+
+        </button>
+
+    </div>
+
+
+    <!-- Collection Heading -->
+
+    <div class="collection-top" id="collection">
+
+        <div>
+
+            <h2>
+                OUR COLLECTION
+            </h2>
+
+            <p>
+                Showing our latest women's shoes
+            </p>
+
+        </div>
+
+        <div class="sort-box">
+
+            <label for="sortSelect">
+                SORT BY
+            </label>
+
+            <select id="sortSelect">
+
+                <option value="featured">
+                    Featured
+                </option>
+
+                <option value="newest">
+                    Newest
+                </option>
+
+                <option value="low">
+                    Price: Low to High
+                </option>
+
+                <option value="high">
+                    Price: High to Low
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products-section">
+
+    <div class="products-grid" id="productsGrid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div
+            class="product-card"
+            data-category="heels"
+            data-price="3499"
+            data-name="Elegant Women Heel">
+
+            <div class="product-image">
+
+                <img
+                    src="woman1.avif"
+                    alt="Elegant Women Heel">
+
+                <button class="wishlist-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+                <span class="product-badge">
+                    NEW
+                </span>
+
+            </div>
+
+            <div class="product-content">
+
+                <p class="product-category">
+                    HEELS
+                </p>
+
+                <h3>
+                    Elegant Women Heel
+                </h3>
+
+                <p class="rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(24)</span>
+                </p>
+
+                <div class="product-bottom">
+
+                    <p class="price">
+                        Rs. 3,499
+                    </p>
+
+                    <button class="add-cart">
+                        ADD TO CART
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div
+            class="product-card"
+            data-category="casual"
+            data-price="3299"
+            data-name="Classic Women Shoe">
+
+            <div class="product-image">
+
+                <img
+                    src="women2.avif"
+                    alt="Classic Women Shoe">
+
+                <button class="wishlist-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+            </div>
+
+            <div class="product-content">
+
+                <p class="product-category">
+                    CASUAL
+                </p>
+
+                <h3>
+                    Classic Women Shoe
+                </h3>
+
+                <p class="rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(21)</span>
+                </p>
+
+                <div class="product-bottom">
+
+                    <p class="price">
+                        Rs. 3,299
+                    </p>
+
+                    <button class="add-cart">
+                        ADD TO CART
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div
+            class="product-card"
+            data-category="heels"
+            data-price="4299"
+            data-name="Luxury Women Heel">
+
+            <div class="product-image">
+
+                <img
+                    src="women3.avif"
+                    alt="Luxury Women Heel">
+
+                <button class="wishlist-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+                <span class="product-badge">
+                    SALE
+                </span>
+
+            </div>
+
+            <div class="product-content">
+
+                <p class="product-category">
+                    HEELS
+                </p>
+
+                <h3>
+                    Luxury Women Heel
+                </h3>
+
+                <p class="rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(32)</span>
+                </p>
+
+                <div class="product-bottom">
+
+                    <p class="price">
+                        Rs. 4,299
+                    </p>
+
+                    <button class="add-cart">
+                        ADD TO CART
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div
+            class="product-card"
+            data-category="sneakers"
+            data-price="3899"
+            data-name="Women Street Sneakers">
+
+            <div class="product-image">
+
+                <img
+                    src="women4.avif"
+                    alt="Women Street Sneakers">
+
+                <button class="wishlist-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+            </div>
+
+            <div class="product-content">
+
+                <p class="product-category">
+                    SNEAKERS
+                </p>
+
+                <h3>
+                    Women Street Sneakers
+                </h3>
+
+                <p class="rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(28)</span>
+                </p>
+
+                <div class="product-bottom">
+
+                    <p class="price">
+                        Rs. 3,899
+                    </p>
+
+                    <button class="add-cart">
+                        ADD TO CART
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 5 -->
+
+        <div
+            class="product-card"
+            data-category="casual"
+            data-price="2999"
+            data-name="Women Casual Flats">
+
+            <div class="product-image">
+
+                <img
+                    src="women5.avif"
+                    alt="Women Casual Flats">
+
+                <button class="wishlist-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+            </div>
+
+            <div class="product-content">
+
+                <p class="product-category">
+                    CASUAL
+                </p>
+
+                <h3>
+                    Women Casual Flats
+                </h3>
+
+                <p class="rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(19)</span>
+                </p>
+
+                <div class="product-bottom">
+
+                    <p class="price">
+                        Rs. 2,999
+                    </p>
+
+                    <button class="add-cart">
+                        ADD TO CART
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 6 -->
+
+        <div
+            class="product-card"
+            data-category="sneakers"
+            data-price="4199"
+            data-name="Women Sport Sneakers">
+
+            <div class="product-image">
+
+                <img
+                    src="women6.avif"
+                    alt="Women Sport Sneakers">
+
+                <button class="wishlist-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+                <span class="product-badge">
+                    NEW
+                </span>
+
+            </div>
+
+            <div class="product-content">
+
+                <p class="product-category">
+                    SNEAKERS
+                </p>
+
+                <h3>
+                    Women Sport Sneakers
+                </h3>
+
+                <p class="rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(35)</span>
+                </p>
+
+                <div class="product-bottom">
+
+                    <p class="price">
+                        Rs. 4,199
+                    </p>
+
+                    <button class="add-cart">
+                        ADD TO CART
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 7 -->
+
+        <div
+            class="product-card"
+            data-category="heels"
+            data-price="4599"
+            data-name="Premium Party Heels">
+
+            <div class="product-image">
+
+                <img
+                    src="women7.avif"
+                    alt="Premium Party Heels">
+
+                <button class="wishlist-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+            </div>
+
+            <div class="product-content">
+
+                <p class="product-category">
+                    HEELS
+                </p>
+
+                <h3>
+                    Premium Party Heels
+                </h3>
+
+                <p class="rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(41)</span>
+                </p>
+
+                <div class="product-bottom">
+
+                    <p class="price">
+                        Rs. 4,599
+                    </p>
+
+                    <button class="add-cart">
+                        ADD TO CART
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 8 -->
+
+        <div
+            class="product-card"
+            data-category="casual"
+            data-price="3599"
+            data-name="Modern Women Shoes">
+
+            <div class="product-image">
+
+                <img
+                    src="women8.avif"
+                    alt="Modern Women Shoes">
+
+                <button class="wishlist-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+            </div>
+
+            <div class="product-content">
+
+                <p class="product-category">
+                    CASUAL
+                </p>
+
+                <h3>
+                    Modern Women Shoes
+                </h3>
+
+                <p class="rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(26)</span>
+                </p>
+
+                <div class="product-bottom">
+
+                    <p class="price">
+                        Rs. 3,599
+                    </p>
+
+                    <button class="add-cart">
+                        ADD TO CART
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- Load More -->
+
+    <button
+        class="load-more"
+        id="loadMoreBtn">
+
+        LOAD MORE
+
+    </button>
+
+</section>
+
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="why-section">
+
+    <h2>
+        ⭐ Why Choose Us
+    </h2>
+
+    <div class="features">
+
+        <div class="feature">
+
+            <i class="fa-solid fa-truck"></i>
+
+            <h4>
+                FREE SHIPPING
+            </h4>
+
+            <p>
+                Free delivery on selected orders.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <i class="fa-solid fa-arrow-rotate-left"></i>
+
+            <h4>
+                EASY RETURNS
+            </h4>
+
+            <p>
+                Simple and hassle-free returns.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <i class="fa-solid fa-lock"></i>
+
+            <h4>
+                SECURE PAYMENT
+            </h4>
+
+            <p>
+                Your payment is safe with us.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <i class="fa-solid fa-star"></i>
+
+            <h4>
+                QUALITY SHOES
+            </h4>
+
+            <p>
+                Premium shoes made for comfort.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+    <h2>
+        STEP INTO STYLE
+    </h2>
+
+    <p>
+        Get the latest women's shoe collections and special offers.
+    </p>
+
+    <form
+        class="newsletter-box"
+        id="newsletterForm">
+
+        <input
+            type="email"
+            placeholder="Enter your email"
+            required>
+
+        <button type="submit">
+            SUBSCRIBE
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-column brand-column">
+
+            <h3>
+                👟Shoe<span>Hub</span>
+            </h3>
+
+            <p>
+                Your destination for stylish,
+                comfortable and quality footwear.
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                QUICK LINKS
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="men.html">
+                Men
+            </a>
+
+            <a href="women.html">
+                Women
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                CUSTOMER
+            </h4>
+
+            <a href="#">
+                Shipping
+            </a>
+
+            <a href="#">
+                Returns
+            </a>
+
+            <a href="#">
+                FAQs
+            </a>
+
+            <a href="Contact.html">
+                Contact Us
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                FOLLOW US
+            </h4>
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+                Instagram
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+                Facebook
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-tiktok"></i>
+                TikTok
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            <i class="fa-regular fa-copyright"></i>
+            2026 ShoeHub. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Women JS -->
+
+<script src="women.js"></script>
+<script src="navber.js"></script>
+
+</body>
+</html>
